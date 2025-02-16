@@ -1,0 +1,86 @@
+/*Texto
+
+font-family—Esta propiedad declara el tipo de letra que se usa para mostrar el texto. Se 
+pueden declarar múltiples valores separados por coma para ofrecer al navegador varias 
+alternativas en caso de que algunos tipos de letra no se encuentren disponibles en el 
+ordenador del usuario. Algunos de los valores estándar son Georgia, "Times New 
+Roman", Arial, Helvetica, "Arial Black", Gadget, Tahoma, Geneva, Helvetica, 
+Verdana, Geneva, Impact, y sans-serif (los nombres compuestos por más de una 
+palabra se deben declarar entre comillas dobles). 
+font-size—Esta propiedad determina el tamaño de la letra. El valor puede ser declarado 
+en píxeles (px), porcentaje (%), o usando cualquiera de las unidades disponibles en CSS 
+como em, rem, pt, etc. El valor por defecto es normalmente 16px. 
+font-weight—Esta propiedad determina si el texto se mostrará en negrita o no. Los 
+valores disponibles son normal y bold, pero también podemos asignar los valores 100, 
+200, 300, 400, 500, 600, 700, 800, y 900 para determinar el grosor de la letra (solo 
+disponibles para algunos tipos de letra).
+font-style—Esta propiedad determina el estilo de la letra. Los valores disponibles son 
+normal, italic, y oblique. 
+font—Esta propiedad nos permite declarar múltiples valores al mismo tiempo. Los valores 
+deben declararse separados por un espacio y en un orden preciso. El estilo y el grosor se 
+deben declarar antes que el tamaño, y el tipo de letra al final (por ejemplo, font: bold 
+24px Arial,sans-serif).
+*/
+
+#titulo { 
+    font-family: Verdana, sans-serif; 
+    font-size: 26px; 
+}
+
+#titulo { 
+    font: bold 26px Verdana, sans-serif; 
+}
+/*
+text-align—Esta propiedad alinea el texto dentro de un elemento. Los valores 
+disponibles son left, right, center, y justify. 
+text-align-last—Esta propiedad alinea la última línea de un párrafo. Los valores 
+disponibles son left, right, center, y justify. 
+text-indent—Esta propiedad define el tamaño de la sangría de un párrafo (el espacio 
+vacío al comienzo de la línea). El valor se puede declarar en píxeles (px), porcentaje (%), o 
+usando cualquiera de las unidades disponibles en CSS, como em, rem, pt, etc. 
+letter-spacing—Esta propiedad define el espacio entre letras. El valor se debe declarar 
+en píxeles (px), porcentaje (%) o usando cualquiera de las unidades disponibles en CSS, 
+como em, rem, pt, etc. 
+word-spacing—Esta propiedad define el ancho del espacio entre palabras. El valor 
+puede ser declarado en píxeles (px), porcentaje (%) o usando cualquiera de las unidades 
+disponibles en CSS, como em, rem, pt, etc.
+line-height—Esta propiedad define el espacio entre líneas. El valor se puede declarar en 
+píxeles (px), porcentaje (%) o usando cualquiera de las unidades disponibles en CSS, como 
+em, rem, pt, etc. 
+vertical-align—Esta propiedad alinea elementos verticalmente. Se usa frecuentemente 
+para alinear texto con imágenes (la propiedad se aplica a la imagen). Los valores disponibles 
+son baseline, sub, super, text-top, text-bottom, middle, top, y bottom. 
+ Por defecto, los navegadores alinean el texto a la izquierda, pero podemos cambiar la alineación 
+con la propiedad text-align. La siguiente regla centra el párrafo de nuestro documento.
+*/
+#descripcion { 
+    text-align: center; 
+    word-spacing: 20px;
+}
+
+a { 
+    text-decoration: none; 
+}
+/*
+. Si usamos una 
+fuente que el usuario no posee, el diseño de nuestro sitio web se verá diferente. Usando fuentes 
+seguras nos aseguramos de que nuestro sitio web se verá de igual manera en cualquier navegador 
+u ordenador, pero el problema es que los tipos de letras incluidos en este grupo son pocos. Para 
+ofrecer una solución y permitir plena creatividad al diseñador, CSS incluye la regla @font-face. 
+La regla @font-face es una regla reservada que permite a los diseñadores incluir un archivo con 
+la fuente de letra a usar para mostrar el texto de una página web. Si la usamos, podemos incluir 
+cualquier fuente que deseemos en nuestro sitio web con solo facilitar el archivo que la contiene. 
+ La regla @font-face necesita al menos dos propiedades para declarar la fuente y cargar 
+el archivo. La propiedad font-family especifica el nombre que queremos usar para 
+referenciar este tipo de letra y la propiedad src indica la URL del archivo con las 
+especificaciones de la fuente (la sintaxis de la propiedad src requiere el uso de la función 
+url() para indicar la URL del archivo). En el siguiente ejemplo, el nombre MiNuevaLetra se 
+asigna a nuestra fuente y el archivo font.ttf se indica como el archivo a cargar.
+*/
+
+
+@font-face { 
+    font-family: "MiNuevaLetra"; 
+    src: url("font.ttf"); 
+}
+

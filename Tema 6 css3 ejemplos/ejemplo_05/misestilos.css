@@ -1,0 +1,55 @@
+/*
+Cuando usamos posicionamiento relativo y absoluto, el diseño del documento se modifica 
+y, por lo tanto, esta técnica no se usa para organizar los elementos en pantalla, sino más bien 
+para crear efectos en los cuales los elementos ocultos se muestran respondiendo a acciones 
+del usuario, como cuando necesitamos crear menús desplegables o listas desplazables que 
+revelan información adicional. Por ejemplo, podemos mostrar una caja con el título de una 
+imagen cuando el usuario mueve el ratón sobre ella.
+
+La imagen y el contenedor se encuentran dentro del elemento cajapadre, pero el 
+contenedor tiene que colocarse encima de la imagen, de modo que se pueda mover para 
+revelar el elemento contenedorinferior con el título cuando el usuario posiciona el ratón 
+sobre la imagen. Por esta razón, tenemos que asignar una posición absoluta a este elemento.
+*/
+
+#cajapadre { 
+    position: relative; 
+    width: 365px; 
+    height: 274px; 
+    overflow: hidden; 
+   }
+
+   #contenedor { 
+    position: absolute; 
+    top: 0px; 
+    width: 365px; 
+    height: 324px; 
+   } 
+   #contenedorsuperior { 
+    width: 365px; 
+    height: 274px; 
+   } 
+   #contenedorinferior { 
+    width: 365px; 
+    height: 35px; 
+    padding-top: 15px; 
+    background-color: rgba(200, 200, 200, 0.8); 
+    text-align: center; 
+   } 
+   #contenedor:hover { 
+    top: -50px; 
+   }
+/*
+El elemento contenedorinferior se muestra tan pronto como el ratón se mueve sobre 
+la imagen. Esto se debe a que no declaramos ninguna transición para la propiedad top. El 
+valor va de 0px a -50px instantáneamente, por lo que no vemos ninguna transición en el 
+proceso. Para declarar pasos intermedios y crear una animación, tenemos que agregar la 
+propiedad transition al elemento contenedor. 
+#contenedor { 
+ position: absolute; 
+ top: 0px; 
+ width: 365px; 
+ height: 324px; 
+ transition: top 0.5s ease-in-out 0s; 
+}
+*/

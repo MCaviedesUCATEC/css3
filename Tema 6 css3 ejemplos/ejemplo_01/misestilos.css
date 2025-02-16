@@ -1,0 +1,32 @@
+/*
+Contenido flotante 
+Las propiedades float y clear se usaron originalmente para hacer que el contenido flote 
+alrededor de un elemento. Por ejemplo, si queremos que un texto se muestre al lado de una 
+imagen, podemos hacer flotar la imagen hacia la izquierda o la derecha, y el texto compartirá 
+con la imagen el espacio disponible en la misma línea.
+*/
+section img { 
+    float: left; 
+    margin: 0px 10px; 
+   }
+/*
+Si queremos mostrar el texto al lado de la imagen, podemos hacer que el elemento <img>
+flote hacia la izquierda o la derecha.*/
+section img { 
+    float: left; 
+    margin: 0px 10px; 
+   }
+
+/*
+Una forma de asegurarnos de que el contenedor es lo suficientemente alto como para 
+contener los elementos flotantes, es asignándole la propiedad overflow con el valor auto. 
+Esto fuerza al navegador a calcular el tamaño del contenedor considerando todos los 
+elementos en su interior.*/
+section { 
+    background-color: #CCCCCC; 
+    overflow: auto; 
+   } 
+section img { 
+    float: left; 
+    margin: 0px 10px; 
+}

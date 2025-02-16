@@ -1,0 +1,108 @@
+/*
+Animaciones 
+La propiedad transition crea una animación básica, pero solo se involucran dos estados en 
+el proceso: el estado inicial determinado por los valores actuales de las propiedades y el 
+estado final, determinado por los nuevos valores. Para crear una animación real, necesitamos 
+declarar más de dos estados, como los fotogramas de una película. CSS incluye las siguientes 
+propiedades para componer animaciones más complejas. 
+animation-name—Esta propiedad especifica el nombre usado para identificar los pasos 
+de la animación. Se puede usar para configurar varias animaciones al mismo tiempo 
+declarando los nombres separados por coma. 
+animation-duration—Esta propiedad determina la duración de cada ciclo de la 
+animación. El valor se debe especificar en segundos (por ejemplo, 1s). 
+animation-timing-function—Esta propiedad determina cómo se llevará a cabo el 
+proceso de animación por medio de una curva Bézier declarada con los valores ease, 
+linear, ease-in, ease-out y ease-in-out. 
+animation-delay—Esta propiedad especifica el tiempo que el navegador esperará antes 
+de iniciar la animación. 
+animation-iteration-count—Esta propiedad declara la cantidad de veces que se 
+ejecutará la animación. Acepta un número entero o el valor infinite, el cual hace que la 
+animación se ejecute por tiempo indefinido. El valor por defecto es 1. 
+animation-direction—Esta propiedad declara la dirección de la animación. Acepta cuatro 
+valores: normal (por defecto), reverse, alternate, y alternate-reverse. El valor 
+reverse invierte la dirección de la animación, mostrando los pasos en la dirección opuesta en 
+la que se han declarado. El valor alternate mezcla los ciclos de la animación, reproduciendo 
+los que tienen un índice impar en dirección normal y el resto en dirección invertida. Finalmente, 
+el valor alternate-reverse hace lo mismo que alternate, pero en sentido inverso. 
+animation-fill-mode—Esta propiedad define cómo afecta la animación a los estilos del 
+elemento. Acepta los valores none (por defecto), forwards, backwards, y both. El valor 
+forwards mantiene al elemento con los estilos definidos por las propiedades aplicadas en 
+el último paso de la animación, mientras que backwards aplica los estilos del primer paso 
+tan pronto como se define la animación (antes de ser ejecutada). Finalmente, el valor both
+produce ambos efectos. 
+animation—Esta propiedad nos permite definir todos los valores de la animación al 
+mismo tiempo. 
+ Estas propiedades configuran la animación, pero los pasos se declaran por medio de la 
+regla @keyframes. Esta regla se debe identificar con el nombre usado para configurar la 
+animación, y debe incluir la lista de propiedades que queremos modificar en cada paso. La 
+posición de cada paso de la animación se determina con un valor en porcentaje, donde 0 % 
+corresponde al primer fotograma o al comienzo de la animación, y 100 % corresponde al final.
+*/
+/*
+header { 
+    margin: 30px; 
+    padding: 15px;
+    text-align: center; 
+    border: 1px solid; 
+    animation: mianimacion 1s ease-in-out 0s infinite normal none; 
+} 
+@keyframes mianimacion { 
+ 0% { 
+ background: #FFFFFF; 
+ } 
+ 50% { 
+ background: #FF0000; 
+ } 
+ 100% { 
+ background: #FFFFFF; 
+ } 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}
+*/
+/*
+Las reglas del Listado 3-83 crean una animación que cambia los colores del fondo de la 
+cabecera de rojo a blanco. La animación se ha definido mediante la propiedad animation con 
+una duración de 1 segundo, y configurado para ejecutarse una y otra vez con el valor 
+infinite. La propiedad también asigna el nombre mianimacion a la animación para poder 
+configurar luego los pasos con la regla @keyframes. 
+ Las propiedades indican en cada paso cómo será afectará al elemento. En este caso, 
+declaramos tres pasos, uno al 0 %, otro al 50 %, y un tercero al 100 %. Cuando se inicia la 
+animación, el navegador asigna al elemento los estilos definidos al 0 % y luego cambia los valores 
+de las propiedades gradualmente hasta llegar a los valores definidos al 50 %. El proceso se repite 
+desde este valor hasta el valor final asignado a la propiedad en el último paso (100 %). 
+ En este ejemplo, definimos el estado inicial de la animación al 0 % y el estado final al 
+100 %, pero también podemos iniciar la animación en cualquier otro punto y declarar todos 
+los pasos que necesitemos, como en el siguiente ejemplo.
+*/
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border: 1px solid; 
+    animation: mianimacion 1s ease-in-out 0s infinite normal none; 
+   } 
+   @keyframes mianimacion { 
+    20% { 
+    background: #FFFFFF; 
+    } 
+    35% { 
+    transform: scale(0.5); 
+    background: #FFFF00; 
+    } 
+    50% { 
+    transform: scale(1.5);
+    background: #FF0000; 
+    } 
+    65% { 
+    transform: scale(0.5); 
+    background: #FFFF00; 
+    } 
+    80% { 
+    background: #FFFFFF; 
+    } 
+    } 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}

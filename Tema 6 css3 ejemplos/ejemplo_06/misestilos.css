@@ -1,0 +1,21 @@
+/*
+Las propiedades para generar las columnas se deben aplicar al contenedor. La siguiente 
+regla incluye la propiedad column-count para dividir el contenido del elemento <article>
+en dos columnas.
+*/
+#articulonoticias { 
+    width: 580px; 
+    padding: 10px; 
+    border: 1px solid; 
+    column-count: 2; 
+    column-gap: 20px; 
+}
+
+#articulonoticias { 
+    width: 580px; 
+    padding: 10px; 
+    border: 1px solid; 
+    column-count: 2; 
+    column-gap: 20px; 
+}
+

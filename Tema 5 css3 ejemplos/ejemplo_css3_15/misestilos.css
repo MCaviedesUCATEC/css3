@@ -1,0 +1,96 @@
+/*Sombras
+Otro efecto interesante que podemos aplicar a un elemento son las sombras. CSS incluye las 
+siguientes propiedades para generar sombras para la caja de un elemento y también para 
+formas irregulares como texto.
+box-shadow—Esta propiedad genera una sombra desde la caja del elemento. Acepta 
+hasta seis valores. Podemos declarar el desplazamiento horizontal y vertical de la sombra, 
+el radio de difuminado, el valor de propagación, el color de la sombra, y también podemos 
+incluir el valor inset para indicar que la sombra deberá proyectarse dentro de la caja. 
+text-shadow—Esta propiedad genera una sombra desde un texto. Acepta hasta cuatro 
+valores. Podemos declarar el desplazamiento horizontal y vertical, el radio de difuminado y 
+el color de la sombra. 
+ La propiedad box-shadow necesita al menos tres valores para poder determinar el color y 
+el desplazamiento de la sombra. El desplazamiento puede ser positivo o negativo. Los valores 
+indican la distancia horizontal y vertical desde la sombra al elemento: los valores negativos 
+posicionan la sombra a la izquierda y encima del elemento, mientras que los positivos crean 
+una sombra a la derecha y debajo del elemento. El valor 0 ubica a la sombra detrás del 
+elemento y ofrece la posibilidad de generar un efecto de difuminado a su alrededor. El 
+siguiente ejemplo agrega una sombra básica a la cabecera de nuestro documento.
+*/
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border: 1px solid; 
+    box-shadow: rgb(150,150,150) 5px 5px; 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }
+
+   /*
+   La sombra que hemos obtenido hasta el momento es sólida, sin gradientes ni 
+transparencia, pero aún no se parece a una sombre real. Para mejorar su aspecto podemos 
+agregar una distancia de difuminado.*/
+/*
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 1px solid; 
+ box-shadow: rgb(150,150,150) 5px 5px 20px; 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}
+*/
+/*
+Al agregar otro valor en píxeles al final de la propiedad, podemos propagar la sombra. Este 
+efecto cambia levemente la apariencia de la sombra y expande el área que ocupa.*/
+/*
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 1px solid; 
+ box-shadow: rgb(150,150,150) 10px 10px 20px 10px; 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}*/
+
+/*
+El último valor disponible para la propiedad box-shadow no es un número, sino la palabra 
+clave inset. Este valor transforma la sombra externa en una sombra interna, lo cual otorga 
+un efecto de profundidad al elemento.*/
+/*
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border: 1px solid; 
+    box-shadow: rgb(150,150,150) 5px 5px 10px inset; 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }
+   */
+
+/*
+La propiedad box-shadow se ha diseñado específicamente para cajas de elementos. Si 
+intentamos aplicar este efecto a un elemento <span>, por ejemplo, la sombra se asignará a la 
+caja alrededor del elemento, no a su contenido. CSS define una propiedad aparte para generar 
+la sombra de un texto llamada text-shadow.*/
+/*
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border: 1px solid; 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+    text-shadow: rgb(150, 150, 150) 3px 3px 5px; 
+   }
+   */
+   

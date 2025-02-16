@@ -1,0 +1,31 @@
+/*
+
+El tamaño del elemento no queda solo determinado por el ancho y la altura de su caja, sino 
+también por el relleno y los márgenes. CSS nos permite designar espacio alrededor de la caja
+para separar el elemento de otros elementos a su alrededor (margen), además de incluir 
+espacio entre los límites de la caja y su contenido (relleno). La Figura 3-19 ilustra cómo se 
+aplican estos espacios a un elemento. 
+Figura 3-19: Márgenes, rellenos y bordes
+ CSS incluye las siguientes propiedades para definir márgenes y rellenos para un elemento. 
+margin—Esta propiedad declara el margen de un elemento. El margen es el espacio que 
+hay alrededor de la caja. Puede recibir cuatro valores que representan el margen superior, 
+derecho, inferior, e izquierdo, en ese orden y separados por un espacio (por ejemplo, 
+margin: 10px 30px 10px 30px;). Sin embargo, si solo se declaran uno, dos o tres 
+valores, los otros toman los mismos valores (por ejemplo, margin: 10px 30px asigna 10 
+píxeles al margen superior e inferior y 30 píxeles al margen izquierdo y derecho). Los 
+valores se pueden declarar independientemente usando las propiedades asociadas 
+margin-top, margin-right, margin-bottom y margin-left (por ejemplo, marginleft: 10px;). La propiedad también acepta el valor auto para obligar al navegador a 
+calcular el margen (usado para centrar un elemento dentro de su contenedor). 
+padding—Esta propiedad declara el relleno de un elemento. El relleno es el espacio entre 
+el contenido del elemento y los límites de su caja. Los valores se declaran de la misma 
+forma que lo hacemos para la propiedad margin, aunque también se pueden declarar de 
+forma independiente con las propiedades padding-top, padding-right, paddingbottom y padding-left (por ejemplo, padding-top: 10px;).
+*/
+
+header { 
+    margin: 30px; 
+    padding: 15px; 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }

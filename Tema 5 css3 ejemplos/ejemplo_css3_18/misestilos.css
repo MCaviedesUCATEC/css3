@@ -1,0 +1,209 @@
+/*
+Una vez que se crean los elementos HTML, estos permanecen inmóviles, pero podemos 
+modificar su posición, tamaño y apariencia por medio de la propiedad transform. Esta 
+propiedad realiza cuatro transformaciones básicas a un elemento: escalado, rotación, 
+inclinación y traslación. Las siguientes son las funciones definidas para este propósito. 
+scale(x, y)—Esta función modifica la escala del elemento. Existen otras dos funciones 
+relacionadas llamadas scaleX() y scaleY() pare especificar los valores horizontales y 
+verticales independientemente. 
+rotate(ángulo)—Esta función rota el elemento. El atributo representa los grados de 
+rotación y se puede declarar en deg (grados), grad (gradianes), rad (radianes) o turn
+(espiras). 
+skew(ángulo)—Esta función inclina el elemento. El atributo representa los grados de 
+desplazamiento. La función puede incluir dos valores para representar el ángulo horizontal 
+y vertical. Los valores se pueden declarar en deg (grados), grad (gradianes), rad
+(radianes) o turn (espiras). 
+translate(x, y)—Esta función desplaza al elemento a la posición determinada por los 
+atributos x e y. 
+ La función scale() recibe dos parámetros, el valor x para la escala horizontal y el valor y
+para la escala vertical. Si solo se declara un valor, ese mismo valor se usa para ambos 
+parámetros.
+*/
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border: 1px solid; 
+    transform: scale(2); 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }
+
+   /*
+   En el ejemplo del Listado 3-73, transformamos la cabecera con una escala que duplica su 
+tamaño. A la escala se le pueden asignar números enteros y decimales, y esta escala se calcula 
+por medio de una matriz. Los valores entre 0 y 1 reducen el tamaño del elemento, el valor 1 
+preserva las proporciones originales, mientras que los valores sobre 1 incrementan las 
+dimensiones del elemento de forma lineal. 
+ Cuando asignamos valores negativos a esta función, se genera un efecto interesante.*/
+ /*
+ header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 1px solid; 
+ transform: scale(1, -1); 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif;
+ */
+
+ /*Además de escalar el elemento, también podemos rotarlo con la función rotate(). En 
+este caso, los valores negativos cambian la dirección en la cual se rota el elemento. El 
+siguiente ejemplo rota la cabecera 30 grados en el sentido de las agujas del reloj.
+*/
+/*
+header { 
+    margin: 30px;
+    padding: 15px; 
+    text-align: center; 
+    border: 1px solid; 
+    transform: rotate(30deg); 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }
+*/
+
+/* Otra función disponible para la propiedad transform es skew(). Esta función cambia la 
+simetría del elemento en grados y en una o ambas dimensiones.
+*/
+/*
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 1px solid; 
+ transform: skew(20deg); 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}
+*/
+/*
+El punto en la posición 0,0 se llama origen, y las líneas de columnas y filas se denominan ejes
+y se identifican con las letras x e y (x para columnas e y para filas), tal como ilustra la Figura 3-50. 
+Usando la propiedad transform podemos cambiar la posición de un elemento en esta 
+cuadrícula. La función que tenemos que asignar a la propiedad en este caso es translate()*/
+/*
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 1px solid; 
+ transform: translate(100px); 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}
+*/
+/*
+A veces, puede resultar útil aplicar varias transformaciones a la vez a un mismo elemento. 
+Para combinar transformaciones con la propiedad transform, tenemos que declarar las 
+funciones separadas por un espacio.*/
+/*
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border: 1px solid; 
+    transform: translateY(100px) rotate(45deg) scaleX(0.3); 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }
+*/
+/*
+De la misma manera que podemos generar transformaciones en dos dimensiones sobre 
+elementos HTML, también podemos hacerlo en tres dimensiones. Estos tipos de 
+transformaciones se realizan considerando un tercer eje que representa profundidad y se 
+identifica con la letra z. Las siguientes son las funciones disponibles para este propósito. 
+scale3d(x, y, z)—Esta función asigna una nueva escala al elemento en un espacio 3D. 
+Acepta tres valores en números decimales para establecer la escala en los ejes x, y y z. Al 
+igual que con transformaciones 2D, el valor 1 preserva la escala original. 
+rotate3d(x, y, z, ángulo)—Esta función rota el elemento en un ángulo y sobre un eje 
+específicos. Los valores para los ejes se deben especificar en números decimales y el 
+ángulo se puede expresar en deg (grados), grad (gradianes), rad (radianes), o turn
+(espiras). Los valores asignados a los ejes determinan un vector de rotación, por lo que los 
+valores no son importantes, pero sí lo es la relación entre los mismos. Por ejemplo, 
+rotate3d(5, 2, 6, 30deg) producirá el mismo efecto que rotate3d(50, 20, 60, 
+30deg), debido a que el vector resultante es el mismo. 
+translate3d(x, y, z)—Esta función mueve el elemento a una nueva posición en el 
+espacio 3D. Acepta tres valores en píxeles para los ejes x, y y z. 
+perspective(valor)—Esta función agrega un efecto de profundidad a la escena 
+incrementando el tamaño del lado del elemento cercano al espectador. 
+ Algunas transformaciones 3D se pueden aplicar directamente al elemento, como hemos 
+hecho con las transformaciones 2D, pero otras requieren que primero declaremos la 
+perspectiva. Por ejemplo, si rotamos el elemento en el eje y, un lado del elemento se 
+desplazará hacia adelante y el otro hacia atrás, pero el tamaño de cada lado permanecerá 
+igual y por ello el usuario no verá la transformación. Para lograr un efecto realista, tenemos 
+que declarar la perspectiva con la función perspective().
+*/
+
+/*
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 1px solid; 
+ transform: perspective(500px) rotate3d(0, 1, 0, 45deg); 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}
+*/
+
+/*
+ CSS también incluye algunas propiedades que podemos usar para lograr un efecto más realista. 
+perspective—Esta propiedad trabaja de forma similar a la función perspective(),
+pero opera en el elemento padre. La propiedad crea un contenedor que aplica el efecto de 
+perspectiva a los elementos en su interior. 
+perspective-origin—Esta propiedad cambia las coordenadas x e y del espectador. 
+Acepta dos valores en porcentaje, píxeles, o las palabras clave center, left, right, top
+y bottom. Los valores por defecto son 50% 50%. 
+backface-visibility—Esta propiedad determina si el reverso del elemento será visible o 
+no. Acepta dos valores: visible o hidden, con el valor visible configurado por defecto. 
+ Debido a que en nuestro ejemplo la cabecera del documento es hija directa del cuerpo, 
+tenemos que asignar estas propiedades al elemento <body>. El siguiente ejemplo define la 
+perspectiva del cuerpo y luego rota la cabecera con la propiedad transform, como hemos 
+hecho anteriormente.
+*/
+/*
+body { 
+ perspective: 500px; 
+ perspective-origin: 50% 90%; 
+} 
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 1px solid; 
+ transform: rotate3d(0, 1, 0, 135deg); 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}
+*/
+/*
+Todas las funciones que hemos estudiado hasta el momento modifican los elementos en el 
+documento, pero una vez que la página web se muestra, permanece igual. Sin embargo, podemos 
+combinar transformaciones y seudoclases para convertir nuestro documento en una aplicación 
+dinámica. La seudoclase que podemos implementar en este caso se llama :hover. Las seudoclases, 
+como hemos visto anteriormente, agregan efectos especiales a las reglas. En este caso, la regla con 
+la seudoclase :hover se aplica solo cuando el ratón se encuentra sobre el elemento que referencia.
+*/
+/*
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 1px solid; 
+} 
+header:hover { 
+ transform: rotate(5deg); 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}
+*/

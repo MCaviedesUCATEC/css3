@@ -1,0 +1,84 @@
+/*
+Seudoclases 
+Las seudoclases son herramientas especiales de CSS que nos permiten referenciar elementos 
+HTML por medio de sus características, como sus posiciones en el código o sus condiciones 
+actuales. Las siguientes son las que más se utilizan. 
+:nth-child(valor)—Esta seudoclase selecciona un elemento de una lista de elementos 
+hermanos que se encuentra en la posición especificada por el valor entre paréntesis. 
+:first-child—Esta seudoclase selecciona el primer elemento de una lista de elementos 
+hermanos. 
+:last-child—Esta seudoclase selecciona el último elemento de una lista de elementos 
+hermanos. 
+:only-child—Esta seudoclase selecciona un elemento cuando es el único hijo de otro 
+elemento.
+:first-of-type—Esta seudoclase selecciona el primer elemento de una lista de elementos 
+del mismo tipo. 
+:not(selector)—Esta seudoclase selecciona los elementos que no coinciden con el 
+selector entre paréntesis. 
+ Con estos selectores, podemos realizar una selección más dinámica.*/
+
+ p:nth-child(2) { 
+    font-size: 20px; 
+}
+
+p:nth-child(4) { 
+    font-size: 20px; 
+}
+
+p:nth-child(1) { 
+    background-color: #999999; 
+} 
+
+p:nth-child(2) { 
+    background-color: #CCCCCC; 
+} 
+
+p:nth-child(3) { 
+    background-color: #999999; 
+} 
+
+p:nth-child(4) { 
+    background-color: #CCCCCC; 
+}
+/* Sin 
+embargo, esta técnica nos obligaría a extender el código innecesariamente y sería imposible 
+aplicarla en sitios web con contenido dinámico. Una alternativa es la que ofrecen las palabras 
+clave odd y even disponibles para esta seudoclase.*/
+
+p:nth-child(odd) { 
+    background-color: #999999; 
+} 
+
+p:nth-child(even) { 
+    background-color: #CCCCCC; 
+}
+
+/*Además de esta seudoclase existen otras que están relacionadas y también nos pueden 
+ayudar a encontrar elementos específicos dentro de la jerarquía, como :first-child, 
+:last-child y :only-child. La seudoclase :first-child referencia solo el primer 
+elemento hijo, :last-child referencia solo el último elemento hijo, y :only-child afecta 
+a un elemento cuando es el único elemento hijo. Estas seudoclases no requieren palabras 
+clave o ningún parámetro adicional y se implementan según muestra el siguiente ejemplo.*/
+
+p:last-child { 
+    font-size: 20px; 
+}
+
+/*Otra seudoclase importante es :not(). Con esta seudoclase podemos seleccionar 
+elementos que no coinciden con un selector. Por ejemplo, la siguiente regla asigna un margen 
+de 0 píxeles a todos los elementos con nombres diferentes de p.*/
+
+:not(p) { 
+    margin: 0px; 
+}
+
+/*
+ En lugar del nombre del elemento podemos usar cualquier otro selector que necesitemos. 
+En el siguiente listado, se verán afectados todos los elementos dentro del elemento 
+<section> excepto aquellos que contengan el atributo class con el valor "mitexto2".*/
+
+section :not(.mitexto2) { 
+    margin: 0px; 
+}
+
+

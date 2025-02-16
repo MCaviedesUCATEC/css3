@@ -1,0 +1,57 @@
+/*
+Existen dos formas de declarar un color en CSS: podemos usar una combinación de tres 
+colores básicos (rojo, verde y azul), o definir el matiz, la saturación y la luminosidad. El color 
+final se crea considerando los niveles que asignamos a cada componente. Dependiendo del 
+tipo de sistema que utilizamos para definir el color, tendremos que declarar los niveles usando 
+números hexadecimales (desde 00 a FF), números decimales (desde 0 a 255) o porcentajes. 
+Por ejemplo, si decidimos usar una combinación de niveles de rojo, verde y azul, podemos 
+declarar los niveles con números hexadecimales. En este caso, los valores del color se declaran 
+en secuencia y precedidos por el carácter numeral, como en #996633 (99 es el nivel de rojo, 66
+
+es el nivel de verde y 33 es el nivel de azul). Para definir colores con otros tipos de valores, CSS 
+ofrece las siguientes funciones. 
+rgb(rojo, verde, azul)—Esta función define un color por medio de los valores 
+especificados por los atributos (desde 0 a 255). El primer valor representa el nivel de rojo, 
+el segundo valor representa el nivel de verde y el último valor el nivel de azul (por ejemplo, 
+rgb(153, 102, 51)). 
+rgba(rojo, verde, azul, alfa)—Esta función es similar a la función rgb(), pero incluye 
+un componente adicional para definir la opacidad (alfa). El valor se puede declarar entre 0 
+y 1, con 0 como totalmente transparente y 1 como totalmente opaco. 
+hsl(matiz, saturación, luminosidad)—Esta función define un color desde los valores 
+especificados por los atributos. Los valores se declaran en números decimales y porcentajes. 
+hsla(matiz, saturación, luminosidad, alfa)—Esta función es similar a la función 
+hsl(), pero incluye un componente adicional para definir la opacidad (alfa). El valor se 
+puede declarar entre 0 y 1, con 0 como totalmente transparente y 1 como totalmente opaco. 
+ Como veremos más adelante, son varias las propiedades que requieren valores que 
+definen colores, pero la siguiente es la que se utiliza con más frecuencia: 
+color—Esta propiedad declara el color del contenido del elemento. 
+ La siguiente regla asigna un gris claro al título de nuestro documento usando números 
+hexadecimales*/
+
+#titulo { 
+    font: bold 26px Verdana, sans-serif; 
+    color: #CCCCCC; 
+   }
+/*o*/
+/*
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+ color: rgb(204, 204, 204); 
+}
+*/
+/*La función hsl() es simplemente otra función disponible para generar un color, pero es más 
+intuitiva que rgb(). A algunos diseñadores les resulta más fácil crear grupos de colores usando 
+hsl(). Los valores requeridos por esta función definen el matiz, la saturación y la luminosidad. El 
+matiz es un color extraído de una rueda imaginaria, expresado en grados desde 0 a 360: alrededor 
+de 0 y 360 se encuentran los rojos, cerca de 120 los verdes, y cerca de 240 los azules. La saturación 
+se representa en porcentaje, desde 0 % (escala de grises) a 100 % (todo color o totalmente 
+saturado), y la luminosidad es también un valor en porcentaje, desde 0 % (completamente negro) a 
+100 % (completamente blanco); un valor de 50 % representa una luminosidad promedio. Por 
+ejemplo, en la siguiente regla, la saturación se define como 0 % para crear un color dentro de la 
+escala de grises y la luminosidad se especifica en 80 % para obtener un gris claro.*/
+#titulo { 
+    font: bold 26px Verdana, sans-serif; 
+    color: hsl(0, 0%, 80%); 
+}
+
+

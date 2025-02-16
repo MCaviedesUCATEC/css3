@@ -1,0 +1,45 @@
+/*Atributo Class*/
+.mitexto { 
+    font-size: 20px; 
+}
+
+p.mitexto { 
+    font-size: 20px; 
+}
+   
+/*Otros atributos*/
+
+p[name="mitexto"] { 
+    font-size: 20px; 
+}
+
+/*CSS nos permite combinar el carácter = con otros caracteres para realizar una selección 
+más específica. Los siguientes caracteres son los más utilizados.
+
+Las reglas del Listado 3-23 se han construido con selectores que incluyen los mismos 
+atributos y valores, pero referencian diferentes elementos, como se describe a continuación. 
+• El selector con los caracteres ~= referencia cualquier elemento <p> con un atributo 
+name cuyo valor incluye la palabra "mi" (por ejemplo, "mi texto", "mi coche"). 
+• El selector con los caracteres ^= referencia cualquier elemento <p> con el atributo 
+name cuyo valor comienza en "mi" (por ejemplo, "mitexto", "micoche"). 
+• El selector con los caracteres $= referencia cualquier elemento <p> con un atributo 
+name cuyo valor termina en "mi" (por ejemplo, "textomi", "cochemi"). 
+• El selector con los caracteres *= referencia cualquier elemento <p> con un atributo 
+name cuyo valor contiene la cadena de caracteres "mi" (en este caso, la cadena de 
+caracteres podría también encontrarse en el medio del texto, como en 
+"textomicoche").*/
+
+p[name~="mi"] { 
+    font-size: 20px; 
+} 
+p[name^="mi"] { 
+    font-size: 20px; 
+}
+
+p[name$="mi"] { 
+    font-size: 20px; 
+} 
+
+p[name*="mi"] { 
+    font-size: 20px; 
+}

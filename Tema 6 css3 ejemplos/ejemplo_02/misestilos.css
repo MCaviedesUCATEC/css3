@@ -1,0 +1,19 @@
+/*
+Otra alternativa para normalizar el flujo del documento es declarar la propiedad clear en 
+el elemento que se encuentra a continuación del elemento flotante dentro del contenedor. 
+Debido a que no siempre tenemos un elemento hermano después de un elemento flotante 
+que podamos usar para prevenir que los elementos sigan flotando, esta técnica requiere que 
+agreguemos un elemento adicional al documento. Por ejemplo, podemos incluir un elemento
+<div> debajo del elemento <p> dentro del elemento <section> de nuestro documento para 
+impedir que los siguientes elementos continúen flotando hacia los lados.
+*/
+section { 
+    background-color: #CCCCCC; 
+} 
+section img { 
+    float: left; 
+    margin: 0px 10px; 
+} 
+.clearfloat { 
+    clear: both; 
+}

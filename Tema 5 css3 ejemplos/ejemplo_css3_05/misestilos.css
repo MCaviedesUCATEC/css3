@@ -1,0 +1,35 @@
+/*referencias*/
+/*Nombres*/
+
+span { 
+    font-size: 20px; 
+}
+
+p, span { 
+    font-size: 20px; 
+}
+
+main p { 
+    font-size: 20px; 
+}  
+/* CSS incluye sintaxis adicionales para realizar una selección más precisa. Por ejemplo, 
+podemos usar el carácter > para referenciar un elemento que es hijo directo de otro elemento.*/
+
+section > p { 
+    font-size: 20px; 
+}
+
+/*Con el carácter + se crea otro selector que facilita CSS. Este selector referencia un elemento 
+que está precedido por otro elemento. Ambos deben compartir el mismo elemento padre.*/
+
+h1 + p { 
+    font-size: 20px; 
+   }
+/* Si se coloca otro elemento entre ambos elementos, el elemento <p> no se 
+modifica. CSS incluye el carácter ~ para crear un selector que afecta a todos los elementos que 
+se ubican a continuación de otro elemento.*/
+p ~ p { 
+    font-size: 20px; 
+   }
+
+   

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Este es un documento HTML5"> 
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="misestilos.css">
+    <title>Document</title>
+    <script> 
+        var visible = false; 
+        function iniciar() { 
+        var elemento = document.getElementById("menu-img"); 
+        elemento.addEventListener("click", mostrarMenu); 
+        } 
+        function mostrarMenu() { 
+        var elemento = document.getElementById("menuprincipal"); 
+        if (!visible) { 
+        elemento.style.display = "block";
+        //elemento.style.display = "flex"; 
+        visible = true; 
+        } else { 
+        elemento.style.display = "none"; 
+        visible = false; 
+        } 
+        } 
+        window.addEventListener("load", iniciar); 
+       </script>
+</head>
+<body>
+    <div id="logo"></div>
+    <nav id="menuicono"> 
+        <img src="iconomenu.png" width="35" height="28" id="menu-img"> 
+       </nav> 
+       <nav id="menuprincipal"> 
+        <div> 
+        <ul> 
+        <li><a href="index.html">Principal</a></li> 
+        <li><a href="fotos.html">Fotos</a></li> 
+        <li><a href="videos.html">Videos</a></li> 
+        <li><a href="contacto.html">Contacto</a></li> 
+        </ul> 
+        </div> 
+       </nav>
+</body>
+</html>

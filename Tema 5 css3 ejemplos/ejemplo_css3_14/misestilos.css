@@ -1,0 +1,113 @@
+/*
+Bordes
+Los elementos pueden incluir un borde en los límites de la caja del elemento. Por defecto, los 
+navegadores no muestran ningún borde, pero podemos usar las siguientes propiedades para definirlo. 
+border-width—Esta propiedad define el ancho del borde. Acepta hasta cuatro valores 
+separados por un espacio para especificar el ancho de cada lado del borde (superior, 
+derecho, inferior, e izquierdo, es ese orden). También podemos declarar el ancho para 
+cada lado de forma independiente con las propiedades border-top-width, borderbottom-width, border-left-width, y border-right-width. 
+border-style—Esta propiedad define el estilo del borde. Acepta hasta cuatro valores 
+separados por un espacio para especificar los estilos de cada lado del borde (superior, 
+derecho, inferior, e izquierdo, en ese orden). Los valores disponibles son none, hidden, 
+dotted, dashed, solid, double, groove, ridge, inset, y outset. El valor por defecto 
+es none, lo que significa que el borde no se mostrará a menos que asignemos un valor 
+diferente a esta propiedad. También podemos declarar los estilos de forma independiente 
+con las propiedades border-top-style, border-bottom-style, border-leftstyle, y border-right-style. 
+border-color—Esta propiedad define el color del borde. Acepta hasta cuatro valores 
+separados por un espacio para especificar el color de cada lado del borde (superior, 
+derecho, inferior, e izquierdo, en ese orden). También podemos declarar los colores de 
+forma independiente con las propiedades border-top-color, border-bottom-color, 
+border-left-color, y border-right-color.
+
+border—Esta propiedad nos permite declarar todos los atributos del borde al mismo 
+tiempo. También podemos usar las propiedades border-top, border-bottom, borderleft, y border-right para definir los valores de cada borde de forma independiente.
+ Para asignar un borde a un elemento, todo lo que tenemos que hacer es definir el estilo con la 
+propiedad border-style. Una vez que se define el estilo, el navegador usa los valores por 
+defecto para generar el borde. Si no queremos dejar que el navegador determine estos valores, 
+podemos usar el resto de las propiedades para configurar todos los atributos del borde. El siguiente 
+ejemplo asigna un borde sólido de 2 píxeles de ancho a la cabecera de nuestro documento.*/
+
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border-style: solid; 
+    border-width: 2px; 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }
+
+/*
+Como hemos hecho con la propiedad background, declaramos todos los valores juntos usando 
+la propiedad border. El siguiente ejemplo crea un borde discontinuo de 5 píxeles en color gris.*/
+
+/*
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 5px dashed #CCCCCC; 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}
+*/
+
+/*
+El borde agregado con estas propiedades se dibuja alrededor de la caja del elemento, lo 
+que significa que va a describir un rectángulo con esquinas rectas. Si nuestro diseño requiere 
+esquinas redondeadas, podemos agregar la siguiente propiedad. 
+border-radius—Esta propiedad define el radio del círculo virtual que el navegador 
+utilizará para dibujar las esquinas redondeadas. Acepta hasta cuatro valores para definir 
+los radios de cada esquina (superior izquierdo, superior derecho, inferior derecho e inferior 
+izquierdo, en ese orden). También podemos usar las propiedades border-top-leftradius, border-top-right-radius, border-bottom-right-radius, y borderbottom-left-radius para definir el radio de cada esquina de forma independiente.*/
+
+/*
+header { 
+ margin: 30px; 
+ padding: 15px; 
+ text-align: center; 
+ border: 2px solid; 
+ border-radius: 20px; 
+} 
+#titulo { 
+ font: bold 26px Verdana, sans-serif; 
+}*/
+
+/* Si todas las esquinas son iguales, podemos declarar solo un valor para esta propiedad, tal 
+como lo hemos hecho en el ejemplo anterior. Sin embargo, al igual que con las propiedades 
+margin y padding, si queremos que las esquinas sean diferentes, tenemos que especificar 
+valores diferentes para cada una de ellas.*/
+/*
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border: 2px solid; 
+    border-radius: 20px 10px 30px 50px; 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }
+
+*/
+
+/*
+También podemos cambiar la forma de las esquinas agregando valores separados por una 
+barra oblicua. Los valores de la izquierda representan el radio horizontal y los valores de la 
+derecha representan el radio vertical. La combinación de estos valores genera una elipse.*/
+
+/*
+header { 
+    margin: 30px; 
+    padding: 15px; 
+    text-align: center; 
+    border: 2px solid; 
+    border-radius: 20px / 10px; 
+   } 
+   #titulo { 
+    font: bold 26px Verdana, sans-serif; 
+   }
+*/
+
